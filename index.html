@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles.css">
+    <title>Gallery</title>
+</head>
+<body>
+    <h1>Books</h1>
+    <div id="gallery">
+        <img src="./assets/img/pic1.jpg" alt="pic-1" id="galleryImage">
+    <div id="button">
+        <button id="prewButton">Назад</button>
+        <button id="nextButton">Вперед</button>
+    </div>
+    </div>
+    <script>
+        // переменные для хранения путей
+        const image1 = "./assets/img/pic2.webp";
+        const image2 = "./assets/img/pic1.jpg";
+
+        // поиск по айди
+        const galleryImage = document.getElementById ("galleryImage");
+        const prewButton = document.getElementById ("prewButton");
+        const nextButton = document.getElementById ("nextButton");
+
+        // функция для изменения изображения
+        function changeImage (image){
+            galleryImage.src = image;
+        }
+        // функция нажатия на кнопку вперед
+        nextButton.addEventListener("click", () =>{
+            changeImage(image1);
+        })
+        // функция нажатия на кнопку назад
+        prewButton.addEventListener("click", () =>{
+            changeImage(image2);
+        })
+    </script> 
+</body>
+</html>
